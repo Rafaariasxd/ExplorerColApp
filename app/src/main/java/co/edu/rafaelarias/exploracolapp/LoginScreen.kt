@@ -7,6 +7,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Home
@@ -30,7 +31,8 @@ import co.edu.rafaelarias.exploracolapp.ui.theme.ExploraColAppTheme
 @Composable
 fun LoginScreen(
     onLoginSuccess: () -> Unit,
-    onNavigateToRegister: () -> Unit
+    onNavigateToRegister: () -> Unit,
+    onBackClick: () -> Unit = {}
 ) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -46,9 +48,22 @@ fun LoginScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .padding(24.dp)
                 .padding(bottom = 24.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            IconButton(
+                onClick = onBackClick,
+                modifier = Modifier
+                    .align(Alignment.Start)
+                    .offset(x = (-12).dp)
+            ) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = null,
+                    tint = primaryOrange
+                )
+            }
             // Header Image with Rounded Corners
             Box(
                 modifier = Modifier
@@ -280,6 +295,6 @@ fun SocialButton(text: String, modifier: Modifier = Modifier, icon: androidx.com
 @Composable
 fun LoginScreenPreview() {
     ExploraColAppTheme {
-        LoginScreen(onLoginSuccess = {}, onNavigateToRegister = {})
+        LoginScreen(onLoginSuccess = {}, onNavigateToRegister = {}, onBackClick = {})
     }
 }

@@ -30,10 +30,10 @@ class MainActivity : ComponentActivity() {
             ){
 
                 composable(route = "login"){
-                    LoginScreen(onLoginSuccess = {}, onNavigateToRegister = {})
+                    LoginScreen(onLoginSuccess = {}, onNavigateToRegister = { myNavController.navigate("register") }, onBackClick = { myNavController.popBackStack() })
                 }
                 composable(route = "register"){
-                    RegisterScreen(onRegisterSuccess = {}, onNavigateToLogin = {})
+                    RegisterScreen(onRegisterSuccess = {}, onNavigateToLogin = { myNavController.navigate("login") }, onBackClick = { myNavController.popBackStack() })
                 }
             }
 
