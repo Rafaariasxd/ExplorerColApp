@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "323786429417",
+    "project_id": "loginexcolapp",
+    "storage_bucket": "loginexcolapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323786429417:android:77ec4f46fe03a6e656b178",
+        "android_client_info": {
+          "package_name": "co.edu.rafaelarias.exploracolapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSJH9zK53g7HKKo9UL_VbQSRYk8a8X5jg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
