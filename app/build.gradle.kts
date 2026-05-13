@@ -63,4 +63,7 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:$nav_version")
 
     implementation(platform("com.google.firebase:firebase-bom:34.12.0"))
+
+    //ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
 }
